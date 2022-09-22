@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import Post, Group
-# from yatube.yatube.settings import EMPTY
 from django.conf import settings
 
 

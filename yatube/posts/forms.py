@@ -10,10 +10,3 @@ class PostForm(forms.ModelForm):
             'text': 'Текст',
             'group': 'Группа',
         }
-
-        def clean_text(self):
-            data = self.cleaned_data['text']
-
-            if data.lower() == "":
-                raise forms.ValidationError('текст не должен быть пустым')
-            return data
