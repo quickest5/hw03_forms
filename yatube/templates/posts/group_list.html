@@ -13,9 +13,10 @@
       {{ group.description }}
     </p>
     <article>
-      {% include 'posts/includes/posts.html' %}
+      {% for post in page_obj %}
+        {% include 'posts/includes/posts.html' %}
+      {% endfor %}
     </article>
-    <!-- под последним постом нет линии -->
   </div>
   {% include 'posts/includes/paginator.html' %}
 {% endblock %}
