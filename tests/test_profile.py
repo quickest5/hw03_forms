@@ -31,7 +31,7 @@ class TestProfileView:
             response.context, get_user_model()
         )
         assert profile_context is not None, 'Проверьте, что передали автора'
-        + 'в контекст страницы `/profile/<username>/`'
+        'в контекст страницы `/profile/<username>/`'
 
         page_context = get_field_from_context(response.context, Page)
         assert page_context is not None, (
