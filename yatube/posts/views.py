@@ -34,10 +34,8 @@ def profile(request, username):
 
 def post_detail(request, post_id):
     post = get_object_or_404(Post, id=post_id)
-    count = Post.objects.filter(author__username=post.author)
     context = {
         'post': post,
-        'count': count,
     }
     return render(request, 'posts/post_detail.html', context)
 
