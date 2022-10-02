@@ -29,7 +29,7 @@ def profile(request, username):
         'author': author,
     }
     context.update(page_content(posts, request))
-    return render(request, 'posts', context)
+    return render(request, 'posts/profile.html', context)
 
 
 def post_detail(request, post_id):
